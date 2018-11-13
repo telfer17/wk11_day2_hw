@@ -23,4 +23,12 @@ public class Library {
             this.stock.add(book);
         }
     }
+
+    public Book removeFromLibrary(){
+        Book bookRemoved = null;
+        if(this.currentStock() > 0){
+            bookRemoved = this.stock.remove(0);
+        }
+        return bookRemoved;
+    }
 }
